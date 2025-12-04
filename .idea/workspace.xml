@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68993663-da1f-4685-b25c-bc88e6b164c9" name="Changes" comment="add mcp demo">
-      <change beforePath="$PROJECT_DIR$/mcp-demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/mcp-demo/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcp-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mcp-demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcp-demo/src/main/java/com/kuaishou/demo/mcp/config/McpSseConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcp-demo/src/main/java/com/kuaishou/demo/mcp/config/McpStreamableHttpConfiguration.java" beforeDir="false" />
+    <list default="true" id="68993663-da1f-4685-b25c-bc88e6b164c9" name="Changes" comment="[mcp demo] update webmvc to webflux">
+      <change afterPath="$PROJECT_DIR$/prompt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp-demo/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,25 +45,34 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.McpDemoApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/huqingyongkuaishou.com/Kuaishou/demo/demo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.McpDemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/huqingyongkuaishou.com/Kuaishou/demo/demo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mcp-demo" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="McpDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="ms-17 (2)" />
@@ -97,7 +105,7 @@
       <workItem from="1763610755445" duration="1198000" />
       <workItem from="1764052533482" duration="599000" />
       <workItem from="1764124401780" duration="599000" />
-      <workItem from="1764215019513" duration="10814000" />
+      <workItem from="1764215019513" duration="13724000" />
     </task>
     <task id="LOCAL-00001" summary="add mcp demo">
       <option name="closed" value="true" />
@@ -107,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764847799433</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[mcp demo] update webmvc to webflux">
+      <option name="closed" value="true" />
+      <created>1764849949032</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764849949032</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +131,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add mcp demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add mcp demo" />
+    <MESSAGE value="[mcp demo] update webmvc to webflux" />
+    <option name="LAST_COMMIT_MESSAGE" value="[mcp demo] update webmvc to webflux" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
