@@ -1,4 +1,4 @@
-package com.kuaishou.demo.mcp.config;
+package com.coldplay.demo.mcp.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

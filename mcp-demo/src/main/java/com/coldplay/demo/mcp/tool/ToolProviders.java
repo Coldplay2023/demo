@@ -1,4 +1,4 @@
-package com.kuaishou.demo.mcp.tool;
+package com.coldplay.demo.mcp.tool;
 
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.ai.tool.method.MethodToolCallbackProvider;

@@ -1,4 +1,4 @@
-package com.kuaishou.demo.mcp.tool;
+package com.coldplay.demo.mcp.tool;
 
 import java.time.Instant;
 import java.util.List;

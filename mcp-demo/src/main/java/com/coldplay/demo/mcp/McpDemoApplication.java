@@ -1,4 +1,4 @@
-package com.kuaishou.demo.mcp;
+package com.coldplay.demo.mcp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

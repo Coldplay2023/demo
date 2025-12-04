@@ -1,4 +1,4 @@
-package com.kuaishou.demo.mcp.web;
+package com.coldplay.demo.mcp.web;
 
 import java.util.Map;
 
