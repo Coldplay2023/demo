@@ -26,6 +26,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=stream
 ```
 
 ## How it works
+- Uses the reactive WebFlux/Netty stack (`spring-boot-starter-webflux` + `spring-ai-starter-mcp-server-webflux`); endpoints are the same as before.
 - `application.yml` sets `spring.ai.mcp.server.protocol=SSE`; `application-stream.yml` switches to `STREAMABLE` when profile `stream` is active.
-- `McpSseConfiguration` and `McpStreamableHttpConfiguration` customize transports and propagate `scope` headers into `McpTransportContext`.
+- `McpWebFluxSseConfiguration` and `McpWebFluxStreamableHttpConfiguration` customize transports and propagate `scope` headers into `McpTransportContext`.
 - `ToolService` defines the MCP tools, and `ToolProviders` registers them via `MethodToolCallbackProvider`.

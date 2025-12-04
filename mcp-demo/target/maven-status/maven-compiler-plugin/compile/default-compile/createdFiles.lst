@@ -1,0 +1,7 @@
+com/kuaishou/demo/mcp/tool/ToolProviders.class
+com/kuaishou/demo/mcp/McpDemoApplication.class
+com/kuaishou/demo/mcp/tool/ToolService.class
+com/kuaishou/demo/mcp/config/McpWebFluxSseConfiguration.class
+com/kuaishou/demo/mcp/config/McpWebFluxStreamableHttpConfiguration.class
+com/kuaishou/demo/mcp/config/McpJsonMapperConfiguration.class
+com/kuaishou/demo/mcp/web/InfoController.class

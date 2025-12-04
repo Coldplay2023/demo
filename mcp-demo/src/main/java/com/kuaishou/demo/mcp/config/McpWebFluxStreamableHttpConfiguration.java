@@ -11,9 +11,12 @@ import org.springframework.context.annotation.Primary;
 
 import io.modelcontextprotocol.common.McpTransportContext;
 import io.modelcontextprotocol.json.McpJsonMapper;
-import io.modelcontextprotocol.server.transport.WebMvcStreamableServerTransportProvider;
+import io.modelcontextprotocol.server.transport.WebFluxStreamableServerTransportProvider;
 import org.springframework.ai.mcp.server.common.autoconfigure.properties.McpServerStreamableHttpProperties;
 
+/**
+ * WebFlux streamable HTTP transport wiring (Netty/reactive stack).
+ */
 @Configuration
 @ConditionalOnProperty(
         prefix = "spring.ai.mcp.server",
@@ -21,16 +24,16 @@ import org.springframework.ai.mcp.server.common.autoconfigure.properties.McpServ
         havingValue = "STREAMABLE"
 )
 @EnableConfigurationProperties(McpServerStreamableHttpProperties.class)
-public class McpStreamableHttpConfiguration {
+public class McpWebFluxStreamableHttpConfiguration {
 
     @Bean
     @Primary
-    public WebMvcStreamableServerTransportProvider webMvcStreamableServerTransportProvider(McpJsonMapper jsonMapper,
-            McpServerStreamableHttpProperties properties) {
+    public WebFluxStreamableServerTransportProvider webFluxStreamableServerTransportProvider(
+            McpJsonMapper jsonMapper, McpServerStreamableHttpProperties properties) {
         String mcpEndpoint = properties.getMcpEndpoint() == null ? "/mcp" : properties.getMcpEndpoint();
-        return WebMvcStreamableServerTransportProvider.builder()
+        return WebFluxStreamableServerTransportProvider.builder()
                 .jsonMapper(jsonMapper)
-                .mcpEndpoint(mcpEndpoint)
+                .messageEndpoint(mcpEndpoint)
                 .keepAliveInterval(properties.getKeepAliveInterval())
                 .disallowDelete(properties.isDisallowDelete())
                 .contextExtractor(serverRequest -> {

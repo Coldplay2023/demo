@@ -2,19 +2,22 @@ package com.kuaishou.demo.mcp.config;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.web.servlet.function.RouterFunction;
-import org.springframework.web.servlet.function.ServerResponse;
+import org.springframework.web.reactive.function.server.RouterFunction;
 
 import io.modelcontextprotocol.common.McpTransportContext;
 import io.modelcontextprotocol.json.McpJsonMapper;
-import io.modelcontextprotocol.server.transport.WebMvcSseServerTransportProvider;
+import io.modelcontextprotocol.server.transport.WebFluxSseServerTransportProvider;
 import org.springframework.ai.mcp.server.common.autoconfigure.properties.McpServerSseProperties;
 
+/**
+ * WebFlux SSE transport wiring (Netty/reactive stack).
+ */
 @Configuration
 @ConditionalOnProperty(
         prefix = "spring.ai.mcp.server",
@@ -23,16 +26,16 @@ import org.springframework.ai.mcp.server.common.autoconfigure.properties.McpServ
         matchIfMissing = true
 )
 @EnableConfigurationProperties(McpServerSseProperties.class)
-public class McpSseConfiguration {
+public class McpWebFluxSseConfiguration {
 
     @Bean
     @Primary
-    public WebMvcSseServerTransportProvider webMvcSseServerTransportProvider(McpJsonMapper jsonMapper,
+    public WebFluxSseServerTransportProvider webFluxSseServerTransportProvider(McpJsonMapper jsonMapper,
             McpServerSseProperties properties) {
-        String baseUrl = properties.getBaseUrl() == null ? "" : properties.getBaseUrl();
-        return WebMvcSseServerTransportProvider.builder()
+        String basePath = properties.getBaseUrl() == null ? "" : properties.getBaseUrl();
+        return WebFluxSseServerTransportProvider.builder()
                 .jsonMapper(jsonMapper)
-                .baseUrl(baseUrl)
+                .basePath(basePath)
                 .sseEndpoint(properties.getSseEndpoint())
                 .messageEndpoint(properties.getSseMessageEndpoint())
                 .keepAliveInterval(properties.getKeepAliveInterval())
@@ -48,7 +51,7 @@ public class McpSseConfiguration {
     }
 
     @Bean
-    public RouterFunction<ServerResponse> mvcMcpRouterFunction(WebMvcSseServerTransportProvider transportProvider) {
+    public RouterFunction<?> reactiveMcpRouterFunction(WebFluxSseServerTransportProvider transportProvider) {
         return transportProvider.getRouterFunction();
     }
 }
