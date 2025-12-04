@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: mcp-demo
+  ai:
+    mcp:
+      server:
+        protocol: SSE
+        name: mcp-demo-server
+        version: 1.0.0
+        type: SYNC
+        instructions: "Demo MCP server providing echo/sum tools; default transport is SSE."
+        tool-change-notification: true
+        sse-endpoint: /sse
+        sse-message-endpoint: /sse/message
+        keep-alive-interval: 30s
+
+server:
+  port: 8085
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

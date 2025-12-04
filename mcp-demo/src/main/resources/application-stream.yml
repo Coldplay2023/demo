@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: stream
+  ai:
+    mcp:
+      server:
+        protocol: STREAMABLE
+        name: mcp-demo-server
+        version: 1.0.0
+        type: SYNC
+        instructions: "Demo MCP server providing echo/sum tools; streamable-http transport."
+        tool-change-notification: true
+        streamable-http:
+          mcp-endpoint: /api/mcp
+          keep-alive-interval: 30s
+
+server:
+  port: 8086
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
