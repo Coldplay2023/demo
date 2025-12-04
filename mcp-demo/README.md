@@ -1,5 +1,9 @@
 ## 我的总结
-（预留空白，后续补充项目整体理解与注意事项）
+这是一个mcp的demo代码，使用了webflux的方式。
+1.其中支持sse和streamable http 两种方式传输。
+2.通过自定义Provider可以在header中加入 apikey等认证方式，进而完成认证。
+然后通过toolContext的方式获取请求头的信息。
+
 
 ## 关键类与核心代码
 - `com.coldplay.demo.mcp.McpDemoApplication`：Spring Boot 启动入口，启动后按配置加载 WebFlux + MCP 相关 Bean。
@@ -75,24 +79,30 @@
               .build();
   }
   ```
-- `com.coldplay.demo.mcp.tool.ToolService`：具体工具实现，提供 echo 与求和能力，日志记录每次调用。
+- `com.coldplay.demo.mcp.tool.ToolService`：具体工具实现，提供 echo 与求和能力，日志记录每次调用，并可借助 `ToolContext` 读取 MCP 传输上下文（sessionId、scope）。
   ```java
   @Tool(name = "echo-intent", description = "Echo helper ...")
-  public String echoIntent(@ToolParam String text, @ToolParam String tag) {
+  public String echoIntent(@ToolParam String text, @ToolParam String tag, ToolContext toolContext) {
       String payload = "echo: " + text + " | tag: " + tag + " | at: " + Instant.now();
-      log.info("Echo tool invoked: {}", payload);
+      log.info("Echo tool invoked: {} | context={}", payload, buildContextSummary(toolContext));
       return payload;
   }
 
   @Tool(name = "sum-numbers", description = "Sums a list of integers...")
-  public String sumNumbers(@ToolParam List<Integer> numbers) {
+  public String sumNumbers(@ToolParam List<Integer> numbers, ToolContext toolContext) {
       int total = numbers == null ? 0 : numbers.stream().mapToInt(Integer::intValue).sum();
-      String joined = numbers == null ? "" : numbers.stream()
-              .map(String::valueOf)
-              .collect(Collectors.joining(" + "));
+      String joined = numbers == null ? "" : numbers.stream().map(String::valueOf).collect(Collectors.joining(" + "));
       String response = joined + " = " + total;
-      log.info("Sum tool invoked: {}", response);
+      log.info("Sum tool invoked: {} | context={}", response, buildContextSummary(toolContext));
       return response;
+  }
+  
+  private String buildContextSummary(ToolContext toolContext) {
+      Optional<McpSyncServerExchange> exchange = McpToolUtils.getMcpExchange(toolContext);
+      McpTransportContext transportContext = exchange.map(McpSyncServerExchange::transportContext).orElse(McpTransportContext.EMPTY);
+      String apiKey = Objects.toString(transportContext.get("apikey"), null);
+      String sessionId = exchange.map(McpSyncServerExchange::sessionId).orElse("n/a");
+      return "sessionId=" + sessionId + (apiKey == null ? "" : ", apikey=" + apiKey);
   }
   ```
 - `com.coldplay.demo.mcp.web.InfoController`：健康检查控制器，提供 `/health`。

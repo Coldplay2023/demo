@@ -41,9 +41,9 @@ public class McpWebFluxSseConfiguration {
                 .keepAliveInterval(properties.getKeepAliveInterval())
                 .contextExtractor(serverRequest -> {
                     Map<String, Object> context = new HashMap<>();
-                    String scopeHeader = serverRequest.headers().firstHeader("scope");
-                    if (scopeHeader != null) {
-                        context.put("scope", scopeHeader);
+                    String apiKeyHeader = serverRequest.headers().firstHeader("apikey");
+                    if (apiKeyHeader != null) {
+                        context.put("apikey", apiKeyHeader);
                     }
                     return context.isEmpty() ? McpTransportContext.EMPTY : McpTransportContext.create(context);
                 })

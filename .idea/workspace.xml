@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68993663-da1f-4685-b25c-bc88e6b164c9" name="Changes" comment="[mcp demo] update webmvc to webflux">
-      <change afterPath="$PROJECT_DIR$/prompt.txt" afterDir="false" />
+    <list default="true" id="68993663-da1f-4685-b25c-bc88e6b164c9" name="Changes" comment="[mcp demo] update path">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcp-demo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp-demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/mcp-demo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp-demo/src/main/java/com/coldplay/demo/mcp/tool/ToolService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mcp-demo/src/main/java/com/coldplay/demo/mcp/tool/ToolService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="ms-17 (2)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="mcp-demo" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kuaishou.demo.mcp.McpDemoApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.coldplay.demo.mcp.McpDemoApplication" />
       <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev --add-exports=java.management/sun.management=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -105,7 +105,7 @@
       <workItem from="1763610755445" duration="1198000" />
       <workItem from="1764052533482" duration="599000" />
       <workItem from="1764124401780" duration="599000" />
-      <workItem from="1764215019513" duration="13724000" />
+      <workItem from="1764215019513" duration="15367000" />
     </task>
     <task id="LOCAL-00001" summary="add mcp demo">
       <option name="closed" value="true" />
@@ -123,7 +123,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764849949032</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[mcp demo] add readme">
+      <option name="closed" value="true" />
+      <created>1764853299013</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764853299013</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[mcp demo] update path">
+      <option name="closed" value="true" />
+      <created>1764853413110</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764853413110</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +148,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add mcp demo" />
     <MESSAGE value="[mcp demo] update webmvc to webflux" />
-    <option name="LAST_COMMIT_MESSAGE" value="[mcp demo] update webmvc to webflux" />
+    <MESSAGE value="[mcp demo] add readme" />
+    <MESSAGE value="[mcp demo] update path" />
+    <option name="LAST_COMMIT_MESSAGE" value="[mcp demo] update path" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
