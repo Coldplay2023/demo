@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68993663-da1f-4685-b25c-bc88e6b164c9" name="Changes" comment="[mcp demo] update path">
+    <list default="true" id="68993663-da1f-4685-b25c-bc88e6b164c9" name="Changes" comment="[mcp demo] update header">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcp-demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/mcp-demo/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcp-demo/src/main/java/com/coldplay/demo/mcp/tool/ToolService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mcp-demo/src/main/java/com/coldplay/demo/mcp/tool/ToolService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcp-demo/src/main/resources/application-stream.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mcp-demo/src/main/resources/application-stream.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.kuaishou.kwaipilot.settings.mcp&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -105,7 +104,15 @@
       <workItem from="1763610755445" duration="1198000" />
       <workItem from="1764052533482" duration="599000" />
       <workItem from="1764124401780" duration="599000" />
-      <workItem from="1764215019513" duration="15367000" />
+      <workItem from="1764215019513" duration="17264000" />
+      <workItem from="1764915371751" duration="5478000" />
+      <workItem from="1765270064867" duration="931000" />
+      <workItem from="1765271103944" duration="5010000" />
+      <workItem from="1765767079377" duration="2848000" />
+      <workItem from="1765867341463" duration="75000" />
+      <workItem from="1765867469605" duration="24000" />
+      <workItem from="1765867500791" duration="319000" />
+      <workItem from="1765867831153" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="add mcp demo">
       <option name="closed" value="true" />
@@ -139,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764853413110</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[mcp demo] update header">
+      <option name="closed" value="true" />
+      <created>1764855045115</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764855045115</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,48 +165,53 @@
     <MESSAGE value="[mcp demo] update webmvc to webflux" />
     <MESSAGE value="[mcp demo] add readme" />
     <MESSAGE value="[mcp demo] update path" />
-    <option name="LAST_COMMIT_MESSAGE" value="[mcp demo] update path" />
+    <MESSAGE value="[mcp demo] update header" />
+    <option name="LAST_COMMIT_MESSAGE" value="[mcp demo] update header" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-defaults>
         <breakpoint type="java-exception">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="javascript-exception">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="kotlin-line">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="java-collection">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="java-method">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="java-wildcard-method">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="java-field">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="java-line">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="kotlin-field">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="kotlin-function">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="javascript">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
         <breakpoint type="OracleBreakpointType">
-          <option name="timeStamp" value="1764215017928" />
+          <option name="timeStamp" value="1765867830423" />
         </breakpoint>
       </breakpoints-defaults>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

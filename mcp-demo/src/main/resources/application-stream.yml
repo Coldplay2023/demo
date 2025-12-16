@@ -5,7 +5,7 @@ spring:
   ai:
     mcp:
       server:
-        protocol: STREAMABLE
+        protocol: STATELESS # 非流式无状态，这个相比于STREAMABLE，是无状态的，即每次请求都是独立的
         name: mcp-demo-server
         version: 1.0.0
         type: SYNC
